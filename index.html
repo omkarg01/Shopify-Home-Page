@@ -1,12 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Require css -->
+    <style>
+        .scroll-hidden::-webkit-scrollbar {
+            height: 0px;
+            background: transparent;
+            /* make scrollbar transparent */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        // 'md':'1024px'
+                        'm': '768px'
+                    },
+                    colors: {
+                        'yellow': '#FBF7ED',
+                        'dark-green': '#004C3F',
+                        'light-green': '#F3FCF4',
+                        'btn-green': '#008060'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
+
+    <title>Shopify | Best E-commerce</title>
 </head>
+
 <body>
-    
+
+    <div class="">
+        <nav class="bg-yellow shadow dark:bg-gray-800">
+            <div class="container px-6 py-3 w-[90%] mx-auto">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+                    <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+                    <div class="items-center md:flex">
+                        <div class="flex justify-between w-[100%]">
+                            <img class="w-[120px] "
+                                src="https://logos-world.net/wp-content/uploads/2020/11/Shopify-Logo-700x394.png"
+                                alt="">
+                            <!-- Mobile menu button -->
+                            <div class="flex m:hidden">
+                                <button onclick="myFunction()" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600"
+                                    aria-label="toggle menu">
+                                    <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                                        <path fill-rule="evenodd"
+                                            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="myDIV" class="flex flex-col mt-2 md:flex-row md:mt-0 md:mx-1 block">
+                            <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
+                                class="font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                                type="button">Start <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
+                                class="font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                                type="button">Sell <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
+                                class="font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                                type="button">Market <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
+                                class="font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                                type="button">Manage <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- Dropdown menu -->
+                    <div id="dropdownDivider"
+                        class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDividerButton">
+                            <li>
+                                <a href="#"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                            </li>
+                        </ul>
+                        <div class="py-1">
+                            <a href="#"
+                                class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Separated
+                                link</a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+                    <div id="myDIV2" class="items-center md:flex block">
+                        <div class="flex flex-col mt-2 md:flex-row md:mt-0 md:mx-1">
+                            <button
+                                class="font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                                type="button">Pricing
+                            </button>
+
+                            <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
+                                class="font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                                type="button">Learn <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="flex items-center py-2 -mx-1 md:mx-0">
+                            <a class="block w-1/2 px-3 py-2 mx-1 text-sm font-medium leading-5 text-center transition-colors duration-200 transform rounded-md md:mx-2 md:w-auto"
+                                href="#">Login</a>
+                            <a class="block w-1/2 px-5 py-3 mx-1 bg-btn-green text-white text-base shadow-md shadow-slate-700 font-medium leading-5 text-center transition-colors duration-200 transform rounded-md md:mx-0 md:w-auto"
+                                href="#">Try for free</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </nav>
+    </div>
+
+
+    <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myDIV");
+            var y = document.getElementById("myDIV2");
+            x.classList.toggle("hidden");
+            y.classList.toggle("hidden");
+        }
+    </script>
 </body>
+
 </html>

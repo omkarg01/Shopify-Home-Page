@@ -14,7 +14,13 @@
             background: transparent;
             /* make scrollbar transparent */
         }
+
+        body {
+            font-family: 'Shopify Sans Web Medium', sans-serif;
+        }
     </style>
+    <link href="//db.onlinewebfonts.com/c/ad26818d844de4534fd78bb03028ca79?family=Shopify+Sans+Web+Medium"
+        rel="stylesheet" type="text/css" />
     <script>
         tailwind.config = {
             theme: {
@@ -26,13 +32,14 @@
                     colors: {
                         'yellow': '#FBF7ED',
                         'dark-green': '#004C3F',
-                        'light-green': '#F3FCF4',
-                        'btn-green': '#008060'
+                        'bg-green': '#F3FCF4',
+                        'light-green': '#008060'
                     }
                 }
             }
         }
     </script>
+
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
 
     <title>Shopify | Best E-commerce</title>
@@ -41,6 +48,7 @@
 <body>
 
     <div class="">
+        <!-- nav -->
         <nav class="bg-yellow shadow dark:bg-gray-800">
             <div class="container px-6 py-3 w-[90%] mx-auto">
                 <div class="flex flex-col md:flex-row md:justify-between md:items-center">
@@ -52,7 +60,8 @@
                                 alt="">
                             <!-- Mobile menu button -->
                             <div class="flex m:hidden">
-                                <button onclick="myFunction()" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600"
+                                <button onclick="myFunction()" type="button"
+                                    class="text-gray-500 dark:text-gray-200 hover:text-gray-600"
                                     aria-label="toggle menu">
                                     <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
                                         <path fill-rule="evenodd"
@@ -64,7 +73,7 @@
                         </div>
                         <div id="myDIV" class="flex flex-col mt-2 md:flex-row md:mt-0 md:mx-1 block">
                             <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
-                                class="font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                                class="font-medium rounded-lg text-md px-4 py-2.5 text-center inline-flex items-center"
                                 type="button">Start <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -72,7 +81,7 @@
                                 </svg>
                             </button>
                             <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
-                                class="font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                                class="font-medium rounded-lg text-md px-4 py-2.5 text-center inline-flex items-center"
                                 type="button">Sell <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -80,7 +89,7 @@
                                 </svg>
                             </button>
                             <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
-                                class="font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                                class="font-medium rounded-lg text-md px-4 py-2.5 text-center inline-flex items-center"
                                 type="button">Market <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -88,7 +97,7 @@
                                 </svg>
                             </button>
                             <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
-                                class="font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                                class="font-medium rounded-lg text-md px-4 py-2.5 text-center inline-flex items-center"
                                 type="button">Manage <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -102,7 +111,7 @@
                     <!-- Dropdown menu -->
                     <div id="dropdownDivider"
                         class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
-                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                        <ul class="py-1 text-md text-gray-700 dark:text-gray-200"
                             aria-labelledby="dropdownDividerButton">
                             <li>
                                 <a href="#"
@@ -119,7 +128,7 @@
                         </ul>
                         <div class="py-1">
                             <a href="#"
-                                class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Separated
+                                class="block py-2 px-4 text-md text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Separated
                                 link</a>
                         </div>
                     </div>
@@ -128,12 +137,12 @@
                     <div id="myDIV2" class="items-center md:flex block">
                         <div class="flex flex-col mt-2 md:flex-row md:mt-0 md:mx-1">
                             <button
-                                class="font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                                class="font-medium rounded-lg text-md px-4 py-2.5 text-center inline-flex items-center"
                                 type="button">Pricing
                             </button>
 
                             <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
-                                class="font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                                class="font-medium rounded-lg text-md px-4 py-2.5 text-center inline-flex items-center"
                                 type="button">Learn <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -143,9 +152,9 @@
                         </div>
 
                         <div class="flex items-center py-2 -mx-1 md:mx-0">
-                            <a class="block w-1/2 px-3 py-2 mx-1 text-sm font-medium leading-5 text-center transition-colors duration-200 transform rounded-md md:mx-2 md:w-auto"
+                            <a class="block w-1/2 px-3 py-2 mx-1 text-md font-medium leading-5 text-center transition-colors duration-200 transform rounded-md md:mx-2 md:w-auto"
                                 href="#">Login</a>
-                            <a class="block w-1/2 px-5 py-3 mx-1 bg-btn-green text-white text-base shadow-md shadow-slate-700 font-medium leading-5 text-center transition-colors duration-200 transform rounded-md md:mx-0 md:w-auto"
+                            <a class="block w-1/2 px-5 py-3 mx-1 bg-light-green hover:bg-dark-green text-white text-base shadow-md shadow-slate-700 font-medium leading-5 text-center transition-colors duration-200 transform rounded-md md:mx-0 md:w-auto"
                                 href="#">Try for free</a>
                         </div>
                     </div>
@@ -154,6 +163,40 @@
 
             </div>
         </nav>
+
+        <!-- hero -->
+        <section class="bg-yellow">
+            <div class="w-[90%] mx-auto md:flex ">
+                <div class=" md:flex ">
+                    <div class="my-auto ">
+                        <h1 class="text-dark-green font-bold text-left text-3xl lg:text-5xl lg:leading-normal">Anyone, anywhere can start an
+                            ecommerce <br> website</h1>
+                        <p class="text-gray-500 my-5 font-thin text:xl lg:text-2xl leading-1">Build your eCommerce website to sell,
+                            ship, and process payments everywhere</p>
+                        <div class="flex flex-col my-8 space-y-3  sm:space-y-0 sm:flex-row sm:justify-center sm:-mx-2">
+                            <input id="email" type="text"
+                                class="px-4 py-2 md:w-[70%] text-gray-900 bg-white border rounded-md sm:mx-2 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-light-green focus:outline-none focus:ring focus:border-light-green focus:ring-opacity-40"
+                                placeholder="Enter your email Address">
+                            <button
+                                class="px-4 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-light-green rounded-md sm:mx-2 hover:bg-dark-green focus:outline-none focus:bg-dark-green">
+                                Get Started
+                            </button>
+                        </div>
+                        <p class="text-xs font-thin text-gray-600">
+                            Try Shopify free for 14 days, no credit card required. By entering your email, you agree to
+                            receive marketing emails from Shopify.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-[100%]">
+                    <img class=""
+                        src="https://cdn.shopify.com/shopifycloud/brochure/assets/home/hero/in-hero-product-small-0c64c4c1013fc8ac477cb5ff62bf5b56b2903aec697e6b708b90d3b65a09baf8.jpg"
+                        alt="">
+                </div>
+            </div>
+        </section>
+
+        
     </div>
 
 
